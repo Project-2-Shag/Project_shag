@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "445457594476",
+    "firebase_url": "https://shag-f30ce.firebaseio.com",
+    "project_id": "shag-f30ce",
+    "storage_bucket": "shag-f30ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445457594476:android:ec413eeac79c59a33b8049",
+        "android_client_info": {
+          "package_name": "com.shag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445457594476-jtjg6pvb4ofjrl7808eplj2jk96b1k9b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shag",
+            "certificate_hash": "589a1cb6f2ac0708622bc946f39a3692248d5361"
+          }
+        },
+        {
+          "client_id": "445457594476-08cka2c3500606ha2k174iselp4opa7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ugt0trs6rwQM_htafsHiAflRFpFzSbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445457594476-08cka2c3500606ha2k174iselp4opa7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
