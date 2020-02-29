@@ -47,10 +47,6 @@ public class RegistrationActivity extends Activity
                     passwordId.setError("Please, enter password");
                     passwordId.requestFocus();
                 }
-                else if (email.isEmpty() && password.isEmpty())
-                {
-                    Toast.makeText(RegistrationActivity.this, "Enter e-mail and password", Toast.LENGTH_SHORT).show();
-                }
                 else
                 {
                     mAuth.createUserWithEmailAndPassword(email, password);

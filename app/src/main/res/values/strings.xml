@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Shag</string>
-    <string name="registrationButtonText">Create account</string>
-    <string name="signInButtonText">Sign in</string>
-    <string name="passwordViewText">\tPassword</string>
-    <string name="EmailViewText">\tE-mail</string>
-    <string name="shagViewText">Shag</string>
+    <string name="app_name">\tШАГ</string>
+    <string name="ru_enter">Войти</string>
+    <string name="ru_reg">Еще нет аккаунта? Регистрация</string>
+    <string name="ru_welcome">Добро\nпожаловать</string>
+    <string name="ru_reg_text">Регистрация</string>
+    <string name="ru_reg_button">Зарегистрироваться</string>
+    <string name="ru_hint_email">Электронная почта</string>
+    <string name="ru_confirm_pass">Подтвердите пароль</string>
+    <string name="ru_hint_pass">Пароль</string>
 </resources>

@@ -2,6 +2,6 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorTheme">#E8A0FF</color>
-    <color name="colorTheme2">#EFBFFF</color>
+    <color name="pink_start">#FF9FE6</color>
+    <color name="pink_end">#FF00BD</color>
 </resources>

@@ -48,10 +48,6 @@ public class MainActivity extends AppCompatActivity
                     passwordId.setError("Please, enter password");
                     passwordId.requestFocus();
                 }
-                else if (email.isEmpty() && password.isEmpty())
-                {
-                    Toast.makeText(MainActivity.this, "Enter e-mail and password", Toast.LENGTH_SHORT).show();
-                }
                 else
                 {
                     mAuth.signInWithEmailAndPassword(email, password);
