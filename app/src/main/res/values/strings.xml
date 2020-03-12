@@ -8,4 +8,5 @@
     <string name="ru_hint_email">Электронная почта</string>
     <string name="ru_confirm_pass">Подтвердите пароль</string>
     <string name="ru_hint_pass">Пароль</string>
+    <string name="ru_logout">Выйти</string>
 </resources>

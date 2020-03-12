@@ -40,17 +40,19 @@ public class MainActivity extends AppCompatActivity
                 String password = passwordId.getText().toString();
                 if (email.isEmpty())
                 {
-                    emailId.setError("Please, enter e-mail");
+                    emailId.setError("Пожалуйста, введите электронную почту");
                     emailId.requestFocus();
                 }
                 else if (password.isEmpty())
                 {
-                    passwordId.setError("Please, enter password");
+                    passwordId.setError("Пожалуйста, введите пароль");
                     passwordId.requestFocus();
                 }
                 else
                 {
                     mAuth.signInWithEmailAndPassword(email, password);
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 }
             }
         });

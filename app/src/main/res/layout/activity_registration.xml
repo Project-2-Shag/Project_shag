@@ -9,7 +9,7 @@
     android:theme="@android:style/Theme.Black.NoTitleBar">
 
     <EditText
-        android:id="@+id/passwordId2"
+        android:id="@+id/passwordIdConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="441dp"
@@ -66,16 +66,17 @@
 
     <Button
         android:id="@+id/registrationButton"
-        android:layout_width="271dp"
-        android:layout_height="0dp"
+        android:layout_width="265dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="111dp"
         android:background="@drawable/round_button"
         android:text="@string/ru_reg_button"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordId2" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordIdConfirm" />
 
     <TextView
         android:id="@+id/textView2"
