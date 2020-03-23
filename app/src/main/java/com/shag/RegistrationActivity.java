@@ -1,16 +1,22 @@
 package com.shag;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 
 
 public class RegistrationActivity extends AppCompatActivity
@@ -32,7 +38,7 @@ public class RegistrationActivity extends AppCompatActivity
         emailId = (EditText) findViewById(R.id.emailId);
         passwordId = (EditText) findViewById(R.id.passwordId);
         passwordIdConfirm = (EditText) findViewById(R.id.passwordIdConfirm);
-        registrationButton = (Button) findViewById(R.id.registrationButton);
+        registrationButton = (Button) findViewById(R.id.nextButton);
 
         registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +68,41 @@ public class RegistrationActivity extends AppCompatActivity
                 }
                 else
                 {
-                    mAuth.createUserWithEmailAndPassword(email, password);
-                    Intent intent = new Intent(RegistrationActivity.this, HomeActivity.class);
-                    startActivity(intent);
+                    mAuth.createUserWithEmailAndPassword(email, password).
+                            addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful())
+                                    {
+                                        Intent intent = new Intent(RegistrationActivity.this, ProfileActivity.class);
+                                        startActivity(intent);
+                                    }
+                                    else
+                                    {
+                                        String exceptionCode = ((FirebaseAuthException) task.getException()).getErrorCode();
+
+                                        switch (exceptionCode)
+                                        {
+
+                                            case "ERROR_INVALID_EMAIL":
+                                                emailId.setError("Пожалуйста, введите корректную электронную почту");
+                                                emailId.requestFocus();
+                                                break;
+
+                                            case "ERROR_EMAIL_ALREADY_IN_USE":
+                                                emailId.setError("Аккаунт с данной элекронной почтой уже существует");
+                                                emailId.requestFocus();
+                                                break;
+
+                                            case "ERROR_WEAK_PASSWORD":
+                                                passwordId.setError("Пароль должен содержать минимум 6 символов");
+                                                passwordId.requestFocus();
+                                                break;
+                                        }
+                                    }
+                                }
+                            });
+
                 }
             }
         });

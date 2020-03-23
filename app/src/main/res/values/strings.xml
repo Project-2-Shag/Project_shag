@@ -9,4 +9,6 @@
     <string name="ru_confirm_pass">Подтвердите пароль</string>
     <string name="ru_hint_pass">Пароль</string>
     <string name="ru_logout">Выйти</string>
+    <string name="ru_profileInfo">Данные профиля</string>
+    <string name="ru_nextActivity">Далее</string>
 </resources>

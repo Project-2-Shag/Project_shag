@@ -57,13 +57,13 @@
         android:background="@drawable/round_button"
         android:text="@string/ru_enter"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/registrationButton"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/registrationButton"
+        android:id="@+id/nextButton"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="259dp"
         android:layout_height="0dp"
