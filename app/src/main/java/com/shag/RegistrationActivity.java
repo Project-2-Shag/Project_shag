@@ -24,8 +24,8 @@ public class RegistrationActivity extends AppCompatActivity
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    private EditText emailId, passwordId, passwordIdConfirm;
-    private Button registrationButton;
+    EditText emailId, passwordId, passwordIdConfirm;
+    Button registrationButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

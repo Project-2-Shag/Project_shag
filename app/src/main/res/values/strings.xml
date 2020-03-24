@@ -11,4 +11,19 @@
     <string name="ru_logout">Выйти</string>
     <string name="ru_profileInfo">Данные профиля</string>
     <string name="ru_nextActivity">Далее</string>
+    <string name="ru_iamdriver">Я водитель</string>
+    <string name="ru_uptowork">За работу!</string>
+    <string name="ru_enterYourId">Ваш идентификатор</string>
+    <string name="ru_goodWork">Удачных\n маршрутов</string>
+    <string name="ru_getNewDriverId">Перевыпустить идентификатор</string>
+    <string name="ru_getNewDriverIdInfo">Для получения нового\nводительского идентификатора\nобратитесь в главное здание\nили свяжитесь с администратором\nпо номеру\n\n8 800 555 35 35</string>
+    <string name="ru_copyNumber">Скопировать номер в буфер обмена</string>
+    <string name="ru_adminMenu">Панель\n администратора</string>
+    <string name="ru_add">Добавить</string>
+    <string name="ru_delete">Удалить</string>
+    <string name="ru_id">Идентификатор</string>
+    <string name="ru_3name">ФИО</string>
+    <string name="ru_numberOfWay">Маршрут</string>
+    <string name="ru_generateCopy">Сгенерировать\n + копировать</string>
+    <string name="ru_nextPage">Далее</string>
 </resources>

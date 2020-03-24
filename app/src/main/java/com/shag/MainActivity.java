@@ -3,7 +3,10 @@ package com.shag;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,11 +22,32 @@ import com.google.firebase.auth.FirebaseAuthException;
 
 public class MainActivity extends AppCompatActivity
 {
+    public static boolean hasConnection(final Context context)
+    {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert cm != null;
+        NetworkInfo wifiInfo = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifiInfo != null && wifiInfo.isConnected()) {
+            return true;
+        }
+        wifiInfo = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if (wifiInfo != null && wifiInfo.isConnected()) {
+            return true;
+        }
+        wifiInfo = cm.getActiveNetworkInfo();
+        if (wifiInfo != null && wifiInfo.isConnected()) {
+            return true;
+        }
+        return false;
+    }
+
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    private EditText emailId, passwordId;
-    private Button signInButton, registrationButton;
+    EditText emailId, passwordId;
+    Button signInButton, registrationButton, IamDriverButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,13 +61,26 @@ public class MainActivity extends AppCompatActivity
         passwordId = (EditText) findViewById(R.id.passwordId);
         signInButton = (Button) findViewById(R.id.signInButton);
         registrationButton = (Button) findViewById(R.id.nextButton);
+        IamDriverButton = (Button) findViewById(R.id.IamDriverButton);
+
+        IamDriverButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IamDriverActivity.class);
+                startActivity(intent);
+            }
+        });
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = emailId.getText().toString();
                 final String password = passwordId.getText().toString();
-                if (email.isEmpty())
+                if (!hasConnection(MainActivity.this))
+                {
+                    Toast.makeText(MainActivity.this, "Нет подключения к интернету", Toast.LENGTH_SHORT).show();
+                }
+                else if (email.isEmpty())
                 {
                     emailId.setError("Пожалуйста, введите электронную почту");
                     emailId.requestFocus();
@@ -53,6 +90,13 @@ public class MainActivity extends AppCompatActivity
                     passwordId.setError("Пожалуйста, введите пароль");
                     passwordId.requestFocus();
                 }
+
+                //!!!!!!!!!!!!!!!!!!!!
+                // зарегать пару электронных почт для админов
+                // создать множество админских электронных почт
+                // добавить проверку на админа
+                //!!!!!!!!!!!!!!!!!!!
+
                 else
                 {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -86,7 +130,7 @@ public class MainActivity extends AppCompatActivity
                                         break;
                                 }
 
-                                Toast.makeText(MainActivity.this, exceptionCode, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(MainActivity.this, exceptionCode, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

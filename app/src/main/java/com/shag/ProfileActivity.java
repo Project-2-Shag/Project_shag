@@ -35,6 +35,11 @@ public class ProfileActivity extends AppCompatActivity
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //!!!!!!!!!!!!!!!!!!!!
+                // пофиксить возможность обойти введение данных кнопкой "назад"
+                //!!!!!!!!!!!!!!!!!!!
+
                 String name = nameId.getText().toString();
                 String document = documentId.getText().toString();
 

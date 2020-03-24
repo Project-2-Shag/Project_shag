@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".IamDriverActivity"></activity>
+        <activity android:name=".GetNewDriverIdActivity"></activity>
         <activity android:name=".ProfileActivity"></activity>
-
         <activity android:name=".RegistrationActivity"></activity>
-
+        <activity android:name=".AdminActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
