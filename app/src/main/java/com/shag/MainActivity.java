@@ -90,13 +90,12 @@ public class MainActivity extends AppCompatActivity
                     passwordId.setError("Пожалуйста, введите пароль");
                     passwordId.requestFocus();
                 }
-
-                //!!!!!!!!!!!!!!!!!!!!
-                // зарегать пару электронных почт для админов
-                // создать множество админских электронных почт
-                // добавить проверку на админа
-                //!!!!!!!!!!!!!!!!!!!
-
+                else if (email.equals("admin@andrey.com") || email.equals("marat@andrey.com"))
+                {
+                    // пароль: AdminAdmin
+                    Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+                    startActivity(intent);
+                }
                 else
                 {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

@@ -43,9 +43,23 @@ public class ProfileActivity extends AppCompatActivity
                 String name = nameId.getText().toString();
                 String document = documentId.getText().toString();
 
-                if (name.isEmpty())
+                final String[] subName;
+                String delimeter = " ";
+                subName = name.split(delimeter);
+
+                if (subName[0].isEmpty())
                 {
-                    nameId.setError("Пожалуйста, введите ФИО");
+                    nameId.setError("Пожалуйста, введите имя");
+                    nameId.requestFocus();
+                }
+                else if (subName[1].isEmpty())
+                {
+                    nameId.setError("Пожалуйста, введите фамилию");
+                    nameId.requestFocus();
+                }
+                else if (subName[2].isEmpty())
+                {
+                    nameId.setError("Пожалуйста, введите отчество");
                     nameId.requestFocus();
                 }
                 else if (document.isEmpty())
@@ -55,15 +69,12 @@ public class ProfileActivity extends AppCompatActivity
                 }
                 else
                 {
-                    final String[] subName;
-                    String delimeter = " ";
-                    subName = name.split(delimeter);
                     FirebaseUser firebaseCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
                     assert firebaseCurrentUser != null;
                     String email = firebaseCurrentUser.getEmail();
 
-                    user.setName(subName[0]);
-                    user.setSecondName(subName[1]);
+                    user.setName(subName[1]);
+                    user.setSecondName(subName[0]);
                     user.setThirdName(subName[2]);
                     user.setDocument(document);
                     user.setEmail(email);
