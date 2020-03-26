@@ -2,6 +2,7 @@ package com.shag;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -206,14 +207,11 @@ public class AdminActivity extends AppCompatActivity {
         });
 
 
-
         nextPageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //!!!!!!!!!!!!!!!!!
-                // добавить новый класс и лэйаут
-                //!!!!!!!!!!!!!!!!!!
+                Intent intent = new Intent(AdminActivity.this, Admin2Activity.class);
+                startActivity(intent);
             }
         });
     }

@@ -5,8 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class IamDriverActivity extends AppCompatActivity
@@ -24,15 +32,40 @@ public class IamDriverActivity extends AppCompatActivity
         getNewIdButton = (Button) findViewById(R.id.getNewIdButton);
         driverIdId = (EditText) findViewById(R.id.driverIdId);
 
+        final DatabaseReference ref;
+        ref = FirebaseDatabase.getInstance().getReference().child("Driver");
+
         upToWorkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String driverId = driverIdId.getText().toString();
+                final String driverId = driverIdId.getText().toString();
 
-                // !!!!!!!!!!!!!!!!!
-                // добавить чтение из базы данных
-                // создать новый класс и лэйаут для домашнего экрана водителя
-                // !!!!!!!!!!!!!!!!!
+                ref.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        boolean flag = false;
+                        for (DataSnapshot ds: dataSnapshot.getChildren())
+                        {
+                            String driverIdToCheck = ds.child("id").getValue().toString();
+                            if (driverId.equals(driverIdToCheck))
+                            {
+                                Intent intent = new Intent(IamDriverActivity.this, DriverHomeActivity.class);
+                                startActivity(intent);
+                                flag = true;
+                                break;
+                            }
+                        }
+                        if (!flag)
+                        {
+                            Toast.makeText(IamDriverActivity.this, "Неверный идентификатор", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 
