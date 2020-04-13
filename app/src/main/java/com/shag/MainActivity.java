@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
                     passwordId.setError("Пожалуйста, введите пароль");
                     passwordId.requestFocus();
                 }
-                else if (email.equals("admin@andrey.com") || email.equals("marat@andrey.com"))
+                else if (email.equals("admin@andrey.com") || email.equals("admin@marat.com"))
                 {
                     // пароль: AdminAdmin
                     Intent intent = new Intent(MainActivity.this, AdminActivity.class);
