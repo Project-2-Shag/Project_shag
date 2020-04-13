@@ -26,4 +26,6 @@
     <string name="ru_numberOfWay">Маршрут</string>
     <string name="ru_generateCopy">Сгенерировать\n + копировать</string>
     <string name="ru_nextPage">Далее</string>
+    <string name="ru_pashalka">PHP для даунов</string>
+    <string name="ru_driverslist">Список водителей</string>
 </resources>

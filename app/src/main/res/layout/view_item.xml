@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="#FCFCFC"
+    android:background="?attr/selectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -16,6 +17,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="4dp"
         android:text="ФИО"
+        android:textSize="20dp"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/viewId"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +30,8 @@
         android:layout_below="@id/viewName"
         android:layout_marginLeft="8dp"
         android:text="Идентификатор"
-        android:textColor="#000000"
+        android:textSize="14dp"
+        android:textColor="#6F6F6F"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +42,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/viewId"
-        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
+        android:layout_marginBottom="4dp"
         android:text="Маршрут"
-        android:textColor="#000000"
+        android:textColor="#6F6F6F"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

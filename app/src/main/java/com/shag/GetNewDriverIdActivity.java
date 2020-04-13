@@ -47,7 +47,7 @@ public class GetNewDriverIdActivity extends AppCompatActivity
                             @Override
                             public void onClick(View v) {
                                 getNewDriverIdInfo = (TextView) findViewById(R.id.getNewDriverIdInfo);
-                                getNewDriverIdInfo.setText("PHP для даунов");
+                                getNewDriverIdInfo.setText(R.string.ru_pashalka);
                                 getNewDriverIdInfo.setTextSize(40);
                             }
                         });
