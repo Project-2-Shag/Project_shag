@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="pink_start">#FF9FE6</color>
     <color name="pink_end">#FF00BD</color>
+    <color name="top">#02c39a</color>
+    <color name="back">#FCFCFC</color>
+    <color name="back_dark">#F5F5F5</color>
 </resources>
