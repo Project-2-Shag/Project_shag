@@ -79,8 +79,10 @@ public class Admin2Activity extends AppCompatActivity
         recyclerView.setLayoutManager(llm);
         adapter = new DriverAdapter(result);
         recyclerView.setAdapter(adapter);
+
         updateList();
     }
+
 
 
     private void updateList()
@@ -119,7 +121,6 @@ public class Admin2Activity extends AppCompatActivity
             }
         });
     }
-
 
     private int getItemIndex(Driver driver)
     {

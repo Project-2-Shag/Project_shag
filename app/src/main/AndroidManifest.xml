@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".IamDriverActivity"></activity>
         <activity android:name=".GetNewDriverIdActivity"></activity>
         <activity android:name=".ProfileActivity"></activity>
@@ -27,7 +18,13 @@
         <activity android:name=".Admin2Activity"></activity>
         <activity android:name=".DriverHomeActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
