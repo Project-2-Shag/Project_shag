@@ -1,8 +1,5 @@
 package com.shag;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Driver
 {
     private String id;
@@ -11,17 +8,6 @@ public class Driver
     private String thirdName;
     private String way;
     private String dateOfCreating;
-
-    public Driver() {
-    }
-
-    public Driver(String id, String name, String secondName, String thirdName, String way) {
-        this.id = id;
-        this.name = name;
-        this.secondName = secondName;
-        this.thirdName = thirdName;
-        this.way = way;
-    }
 
     public String getId() { return id; }
 
@@ -46,15 +32,4 @@ public class Driver
     public String getDateOfCreating() { return dateOfCreating; }
 
     public void setDateOfCreating(String dateOfCreating) { this.dateOfCreating = dateOfCreating; }
-
-    public Map<String, Object> toMap()
-    {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("name", name);
-        result.put("secondName", secondName);
-        result.put("thirdName", thirdName);
-        result.put("id", id);
-        result.put("way", way);
-        return result;
-    }
 }

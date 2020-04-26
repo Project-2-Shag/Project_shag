@@ -129,7 +129,7 @@ public class AdminActivity extends AppCompatActivity {
                     String dateText = dateFormat.format(currentDate);
                     DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
                     String timeText = timeFormat.format(currentDate);
-                    String dateTime = dateText + " " + timeText;
+                    String dateTime = dateText + "; " + timeText;
 
                     driver.setId(driverId);
                     driver.setName(subName[1]);
@@ -142,11 +142,10 @@ public class AdminActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful())
                             {
+                                Toast.makeText(AdminActivity.this, "Водитель добавлен", Toast.LENGTH_LONG).show();
                                 driverIdId.setText("");
                                 nameId.setText("");
                                 wayId.setText("");
-                                Toast.makeText(AdminActivity.this, "Водитель добавлен", Toast.LENGTH_LONG).show();
-
                             }
                             else
                             {
