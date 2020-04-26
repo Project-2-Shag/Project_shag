@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FCFCFC"
-    android:theme="@android:style/Theme.Black.NoTitleBar"
     tools:context=".MainActivity">
 
     <TextView
@@ -42,10 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="326dp"
         android:ems="10"
+        android:fontFamily="sans-serif-thin"
         android:hint="ФИО"
         android:inputType="textPersonName"
         android:textColor="#000000"
-        android:textColorHint="#6F6F6F"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -56,9 +57,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
         android:ems="10"
+        android:fontFamily="sans-serif-thin"
         android:hint="Номер документа"
         android:inputType="textPersonName"
-        android:textColorHint="#6F6F6F"
+        android:textColor="#ffffff"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameId" />

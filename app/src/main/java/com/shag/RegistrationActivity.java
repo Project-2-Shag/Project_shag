@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class RegistrationActivity extends AppCompatActivity
 
     EditText emailId, passwordId, passwordIdConfirm;
     Button registrationButton;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,10 +41,12 @@ public class RegistrationActivity extends AppCompatActivity
         passwordId = (EditText) findViewById(R.id.passwordId);
         passwordIdConfirm = (EditText) findViewById(R.id.passwordIdConfirm);
         registrationButton = (Button) findViewById(R.id.nextButton);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //progressBar.setVisibility(ProgressBar.VISIBLE);
                 String email = emailId.getText().toString();
                 String password = passwordId.getText().toString();
                 String passwordConfirm = passwordIdConfirm.getText().toString();
@@ -68,6 +72,7 @@ public class RegistrationActivity extends AppCompatActivity
                 }
                 else
                 {
+                    //progressBar.setVisibility(ProgressBar.VISIBLE);
                     mAuth.createUserWithEmailAndPassword(email, password).
                             addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -102,7 +107,7 @@ public class RegistrationActivity extends AppCompatActivity
                                     }
                                 }
                             });
-
+                    //progressBar.setVisibility(ProgressBar.INVISIBLE);
                 }
             }
         });
