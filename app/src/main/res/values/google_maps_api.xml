@@ -1,0 +1,4 @@
+<resources>
+    <!-- Google Maps API key -->
+    <string name="unrestricted_map_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCyBt7ZLiMLLyM6QxecdREWSUVnSur_STw</string>
+</resources>

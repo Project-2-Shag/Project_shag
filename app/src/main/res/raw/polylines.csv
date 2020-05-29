@@ -1,0 +1,59 @@
+// note: the encodedPoints strings in this file contain encoded Lat Lng values for drawing polylines on map.
+// It was retrieved by calling this example http request: https://maps.googleapis.com/maps/api/directions/json?origin=-35.529076,%20138.687050&destination=-35.529076,%20138.687050&waypoints=1%20Kessell%20Rd,%20Goolwa%20SA%205214|8%20Hays%20St,%20Goolwa%20SA%205214|54%20Beach%20Rd,%20Goolwa%20South%20SA%205214|&key=AIzaSyBIkoRC0eBVnGA1AO866dnfPW00ZjGrmzo
+// More information can be found at https://developers.google.com/maps/documentation/directions/intro
+
+mainMarker, marker, -35.55678,138.62361, Schoolies Festival™ Warland Reserve
+
+way31, encodedPoints, cqc_HoutlFwDhGyBlDc@d@_BvAqBxAsA`A]`@KXeGfPpHnWxEuIRc@T[D?PO^w@lBeDdA}Bx@uAV_@lB|@fCrAlAr@hEjC`BsHrBeJlBqIpBeJ~CeO|A_HqDwBMG[G[@[BsFjAmEx@a@NcArAeFtIgBxC
+way31, marker, 47.209312, 38.941226
+way31, marker, 47.213866, 38.934799
+way31, marker, 47.211375, 38.932284
+way31, marker, 47.205330, 38.938383
+way31line0to1, encodedPoints, cqc_HoutlFwDhGyBlDc@d@_BvAqBxAsA`A]`@KXkFpN
+way31line1to2, encodedPoints, umd_HomslFYt@xCpKfCpINj@pBqDfBcD
+way31line2to3, encodedPoints, c~c_H_~rlFRc@T[D?PO^w@lBeDdA}Bx@uAV_@lB|@fCrAlAr@hEjC`BsHrBeJ`@iBjAgF
+way31line3to4, encodedPoints, ixb_H{ctlFpBeJ~CeO|A_HqDwBMG[G[@[BsFjAmEx@a@NcArAeFtIgBxC
+
+way6, encodedPoints, mbc_HctqlFc@pDI|@QhAwBlJiD`OqI~^aDvNwArFi@vB|IxFhCbBFD\\iBf@kCvBmKbAcFF[`IbFlAmF~AeHhIs^lI~ElAuFBW}Bue@_Hv@yDd@]EOEmIgFg@nE
+way6, marker, 47.206943, 38.925618, Магнит
+way6, marker, 47.211682, 38.910803, Смирновский
+way6, marker, 47.208621, 38.911076, Карл Либнехт
+way6, marker, 47.204089, 38.918993, Антон Глушко
+way6, marker, 47.203603, 38.925714, Итальянский
+way6line0to1, encodedPoints, mbc_HctqlFc@pDI|@QhAwBlJiD`OqI~^aDvNwArF
+way6line1to2, encodedPoints, {_d_HmwnlFi@vB|IxFhCbBFD\\iBf@kCtA}G
+way6line2to3, encodedPoints, ylc_HeynlFdBsIF[`IbFlAmF~AeHjGsX\\{A
+way6line3to4, encodedPoints, qpb_HujplF^cBdFxCfBdAx@}DRw@BW}Bue@_Fj@
+way6line4to5, encodedPoints, omb_HqtqlFcFn@e@?WEsIkFg@nE
+
+
+lineBlue, encodedPoints, iub_HimtlFaId^}Gd[lExC
+lineBlue, marker, 47.204850, 38.939889, Чехова
+lineBlue, marker, 47.206549, 38.934647, Добролюбовский
+lineBlue, marker, 47.207022, 38.929688, Тургеневский
+
+
+lineOrange, encodedPoints, g`c_HcqtlFkAlBgAaBs@`AG?IEw@yA|B{DxCeFzAqCH]VRhAp@tD~BdBnAeCtLGV
+
+
+
+lineViolet, encodedPoints, {ac_HcmrlFxBxAq@tFyArM
+lineViolet, marker, 47.206748, 38.925507, Магнит
+
+
+
+lineGreen, encodedPoints, b}|wEi`cmY`@sBo@gA{@eBqAoC_@eA]cA]yAk@yDe@cEUcAc@qAi@iA{CwFw@sAk@u@UUk@_@eEuB}Aq@y@Uq@UYEg@CGFIBUAOQCYJYBSB_@Ce@GmA]iEmCa]sGkx@oMg_B{AmQy@}KcBeT{@cLo@oHy@iJW}AYcAUq@c@{@g@{@i@s@g@g@WYy@g@wBmAaCqA^qAjAoDX}BR[`@WRCd@J|C`BT?lASrCa@dAKB?C?_@BoAPiBVmARU?s@a@iB_Ae@KSBa@VSZKh@MrAkAnD_@pA`CpAvBlAx@f@VXf@f@h@r@f@z@b@z@Tp@XbAV|A^vDhA`NvBpXdCd\\v@|IjDxb@pErj@pHh~@vEhl@F|@FJ`@rCDDBBDJbAh@v@XTLTPh@RpB`ArBbAp@`@TRf@j@`@n@xCrFhAvBJTn@tBJn@R~A`@pDh@nCZhAl@`B|BxEf@`AV`@GREVSfA
+lineGreen, marker, -35.536411, 138.639775, Repco Bus Stop 6
+lineGreen, marker, -35.534787, 138.650920, Bus Stop 8
+lineGreen, marker, -35.530169, 138.681719, Port Elliot Bus Stop
+lineGreen, marker, -35.530570000000004, 138.68959, Port Elliot Holiday Park
+
+
+linePink, encodedPoints, `qzwE}xnmYq@DoBTsCf@YGsBkAs@YSA]L]XMb@K~@Gh@M`@}A~E}CwAuAm@i@Mk@IyAKqBFk\\hE_CDq@Ew@OmBk@yHaD}KsEq@_@g@a@e@e@k@w@c@_Ag@uAWqAQkAWaDwBeXcFmn@UwAUo@g@iAwIwLyDmF[i@U{@Ko@Eo@HaBzFer@xB{VHaBDcCAeA_@sIwHekBcFukA{Bgi@kAGaCWmMgBiSiCkAWoAi[aDmu@i@mNAKCQLItEwDjLqJ`JqHdAw@d@WpAw@RKFAPFdGdG^ZJN?RIxAM|BsAtS]lGFj@@@\\DHD^?`@?tDJzDJrEh@|S`C|H`AlMvAtAPuAQmMwA}HaA}SaCsEi@yIUyAAID]DA@A@A?Ef@D`ATxElAvYz@vQrAf[lCfp@|Blh@`MzyC@|BMjCK~A}AlQoFro@g@rG@f@L|@VdA~@xA|KlObBhCh@vATvAz@xJnBvVfEbi@\\xBXdA|@rBj@v@d@d@xA`ArUrJpBl@z@NfBDdAEbAMfZ{Dt@Ez@AxAJtAVxAn@xCtA^qAjAoDX}BR[`@WRCd@J|C`BT?lASrCa@dAKB?
+linePink, marker, -35.510994, 138.703837, Middleton Store Bus Stop 12
+linePink, marker, -35.509204, 138.721063, Chapman Rd Bus Stop 13
+linePink, marker, -35.498173, 138.772636, Goolwa Camping & Tourist Park
+linePink, marker, -35.499598, 138.78091, Goolwa Caltex
+linePink, marker, -35.504947, 138.779322, Goolwa Stratco
+linePink, marker, -35.515820, 138.77473, Beach Rd,   -35.515146 , 138.774872,
+linePink, marker, -35.505026, 138.772299, Bus Stop 14
