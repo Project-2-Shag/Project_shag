@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.shag.map.MapsActivity;
 
 public class ProfileActivity extends AppCompatActivity {
     private EditText nameId, documentId;
@@ -106,7 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
                     user.setEmail(email);
                     ref.push().setValue(user);
 
-                    Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(ProfileActivity.this, MapsActivity.class);
                     startActivity(intent);
                 }
             }

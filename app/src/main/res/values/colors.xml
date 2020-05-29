@@ -7,4 +7,15 @@
     <color name="top">#02c39a</color>
     <color name="back">#FCFCFC</color>
     <color name="back_dark">#F5F5F5</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPolyLineBlue">#29AAE1</color>
+    <color name="colorPolyLineOrange">#F8A15B</color>
+    <color name="colorPolyLineViolet">#AC4298</color>
+    <color name="colorPolyLineGreen">#57BA48</color>
+    <color name="colorPolyLinePink">#ED4C9B</color>
+    <color name="colorPolyLineGray">#838383</color>
+    <color name="colorMainMarker">#253F8E</color>
+    <color name="White">#fff</color>
 </resources>

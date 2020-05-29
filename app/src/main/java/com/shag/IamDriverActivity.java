@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.shag.map.DriverMapActivity;
 
 
 public class IamDriverActivity extends AppCompatActivity
@@ -47,9 +48,11 @@ public class IamDriverActivity extends AppCompatActivity
                         for (DataSnapshot ds: dataSnapshot.getChildren())
                         {
                             String driverIdToCheck = ds.child("id").getValue().toString();
+                            String way = ds.child("way").getValue().toString();
                             if (driverId.equals(driverIdToCheck))
                             {
-                                Intent intent = new Intent(IamDriverActivity.this, DriverHomeActivity.class);
+                                Intent intent = new Intent(IamDriverActivity.this, DriverMapActivity.class);
+                                intent.putExtra("way", way);
                                 startActivity(intent);
                                 flag = true;
                                 break;
